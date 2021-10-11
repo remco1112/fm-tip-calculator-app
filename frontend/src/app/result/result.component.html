@@ -1,0 +1,17 @@
+<div>
+  <div class="container">
+    <div>
+      <h2>Tip Amount</h2>
+      <h3>/ person</h3>
+    </div>
+    <h1>${{pp}}</h1>
+  </div>
+  <div class="container">
+    <div>
+      <h2>Total</h2>
+      <h3>/ person</h3>
+    </div>
+    <h1>${{tot}}</h1>
+  </div>
+</div>
+<button (click)="onReset()" [disabled]="!enableReset">Reset</button>
