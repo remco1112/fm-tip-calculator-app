@@ -1,0 +1,28 @@
+<form [formGroup]="formGroup">
+  <label for="bill">Bill</label>
+  <div class="input-group">
+    <img src="assets/icon-dollar.svg" alt="dollar sign"/>
+    <input formControlName="bill" name="bill" id="bill" type="number" step="0.01" placeholder="0"/>
+  </div>
+  <fieldset>
+    <legend>Select Tip %</legend>
+    <div>
+      <input formControlName="tip" id="radio-5" type="radio" name="tip" value="5" />
+      <label for="radio-5">5%</label>
+      <input formControlName="tip" id="radio-10" type="radio" name="tip" value="10" />
+      <label for="radio-10">10%</label>
+      <input formControlName="tip" id="radio-15" type="radio" name="tip" value="15" />
+      <label for="radio-15">15%</label>
+      <input formControlName="tip" id="radio-25" type="radio" name="tip" value="25"/>
+      <label for="radio-25">25%</label>
+      <input formControlName="tip" id="radio-50" type="radio" name="tip" value="50" />
+      <label for="radio-50">50%</label>
+      <input formControlName="customTip" type="number" step="0.01" name="tipc" id="tipc" placeholder="Custom" (focus)="focusCustom()"/>
+    </div>
+  </fieldset>
+  <label for="numberOfPeople">Number of People</label>
+  <div class="input-group">
+    <img src="assets/icon-person.svg" alt="icon person"/>
+    <input formControlName="nrOfPeople" type="number" placeholder="0" name="numberOfPeople" id="numberOfPeople" />
+  </div>
+</form>
