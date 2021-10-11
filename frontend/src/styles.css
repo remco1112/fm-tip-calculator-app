@@ -11,3 +11,8 @@
   --light-grayish-cyan2: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
 }
+
+body {
+  margin: 0;
+  background-color: #b7dde0;
+}
