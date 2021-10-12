@@ -38,8 +38,9 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked + label {
-  background-color: var(--strong-cyan);
+  background-color: var(--strong-cyan) !important;
   color: var(--very-dark-cyan);
+  cursor: unset !important;
 }
 
 .input-group {
@@ -85,6 +86,11 @@ fieldset > div label {
   font-size: 32px;
   padding: .3em;
   box-sizing: border-box;
+}
+
+fieldset > div label:hover {
+  background-color: var(--hover-color);
+  cursor: pointer;
 }
 
 #tipc {
