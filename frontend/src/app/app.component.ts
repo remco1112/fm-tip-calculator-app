@@ -1,6 +1,6 @@
 import {Component, ViewChild} from '@angular/core';
 import {FormComponent} from "./form/form.component";
-import {ResultComponent} from "./result/result.component";
+import {environment} from "../environments/environment";
 
 @Component({
   selector: 'app-root',
@@ -16,7 +16,19 @@ export class AppComponent {
   @ViewChild(FormComponent) form?: FormComponent;
 
   submit(event: {bill: number, tip: number, nrOfPeople: number}) {
-    console.log(event);
+    if (environment.useBackend) {
+
+    } else {
+      let tipPP  = event.bill * event.tip / 100 / event.nrOfPeople;
+      this.tot = (Math.round((event.bill / event.nrOfPeople + tipPP) * 100) / 100).toString();
+      this.pp = (Math.round(tipPP * 100) / 100).toString();
+    }
+  }
+
+  reset() {
+    this.pp = '0.00';
+    this.tot = '0.00';
+    this.form?.reset();
   }
 
 }

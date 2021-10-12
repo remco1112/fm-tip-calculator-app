@@ -3,7 +3,7 @@
   <app-form (formCompleted)="submit($event)"></app-form>
   <app-result
     [enableReset]="form?.isDirty() ?? false"
-    (reset)="form?.reset()"
+    (reset)="reset()"
     [pp]="pp"
     [tot]="tot"
   ></app-result>
