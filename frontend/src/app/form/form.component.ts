@@ -54,4 +54,11 @@ export class FormComponent implements OnInit {
     this.formGroup.get('tip')?.setValue('');
   }
 
+  isDirty(): boolean {
+    return this.formGroup.dirty;
+  }
+
+  reset(): void {
+    this.formGroup.reset();
+  }
 }

@@ -1,5 +1,10 @@
 <img src="assets/logo.svg" alt="splitter"/>
 <div class="container">
-  <app-form></app-form>
-  <app-result></app-result>
+  <app-form (formCompleted)="submit($event)"></app-form>
+  <app-result
+    [enableReset]="form?.isDirty() ?? false"
+    (reset)="form?.reset()"
+    [pp]="pp"
+    [tot]="tot"
+  ></app-result>
 </div>
